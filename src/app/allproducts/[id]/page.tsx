@@ -12,7 +12,7 @@ const getProductData = (id: number) => {
     return res;
 };
 
-function Page({ params }: any) {
+function page({ params }: any) {
     const product = getProductData(params.id);
     const [count, setCount] = useState(1);
     function plusCart() {
@@ -103,4 +103,4 @@ function Page({ params }: any) {
     )
 }
 
-export default Page
+export default page
