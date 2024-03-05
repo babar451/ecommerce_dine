@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 
-function male() {
+function Male() {
   return (
     <main className=''>
       {productsData.length > 0 ? (
@@ -39,4 +39,4 @@ function male() {
   )
 }
 
-export default male
+export default Male

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 
-function kids() {
+function Kids() {
   return (
     <main className=''>
       {productsData.length > 0 ? (
@@ -39,4 +39,4 @@ function kids() {
   )
 }
 
-export default kids
+export default Kids
