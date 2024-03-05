@@ -11,7 +11,7 @@ function FeatureBanner() {
             </div>
             <div className='grid xl:grid-cols-2'>
                 <div className='grid grid-cols-2 gap-8 items-center relative z-10'>
-                    <div className='absolute z-0 opacity-10 text-8xl'>
+                    <div className='absolute z-0 opacity-10 text-6xl sm:text-8xl'>
                         Different from others
                     </div>
                     <div className='xl:w-8/12'>
