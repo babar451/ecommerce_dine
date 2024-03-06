@@ -15,14 +15,20 @@ const getProductData = (id: number) => {
 function Alldynamic({ params }: any) {
     const product = getProductData(params.id);
     const [count, setCount] = useState(1);
+    const [price, setPrice] = useState<number>(product.price);
     function plusCart() {
-        setCount(count + 1);
+        if (count < 5) {
+            setCount(count + 1);
+            setPrice(product.price * (count + 1));
+        }
     }
     function minusCart() {
         if (count > 1) {
             setCount(count - 1);
+            setPrice(product.price * (count - 1));
         }
     }
+    
     return (
         <section className='bg-[rgb(252,252,252)]'>
             <div className='grid lg:grid-cols-[auto,auto] gap-5 md:gap-10 pt-10'>
@@ -66,7 +72,7 @@ function Alldynamic({ params }: any) {
                             <ShoppingCart />
                             <p className='pl-3 text-lg'>Add to Cart</p>
                         </Button>
-                        <p className='text-3xl font-bold'>{product.price}</p>
+                        <p className='text-3xl font-bold'>${price}</p>
                     </div>
                 </div>
             </div>
